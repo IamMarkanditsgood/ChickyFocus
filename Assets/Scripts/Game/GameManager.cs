@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameData gameData;
     public Home _home;
     void Start()
     {
+        gameData.LoadData();
         _home.Show();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnApplicationPause(bool pauseStatus)
     {
-        
+        if (pauseStatus)
+        {
+            gameData.SaveData();
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        gameData.SaveData();
     }
 }

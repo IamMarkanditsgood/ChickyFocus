@@ -76,4 +76,16 @@ public partial class GameData : MonoBehaviour
             SaveManager.PlayerPrefs.SaveInt(pair.Key.ToString(), pair.Value);
         }
     }
+
+    public bool IsBought(ChickenTypes chicken)
+    {
+        foreach(var config in boughtChickens)
+        {
+            if(config == chicken)
+            {
+                return true;    
+            }
+        }
+        return false;
+    }
 }

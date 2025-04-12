@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Chicken1
   m_EditorClassIdentifier: 
   chickenType: 0
-  hatchingTime: 120
-  pauseTime: 0
+  hatchingTime: 30
+  pauseTime: 30
   price: 0
   reward: 25
   menuDefaultCard: {fileID: 21300000, guid: 3a43d24ab7440fd488b050ed4af69e61, type: 3}

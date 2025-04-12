@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class AvatarManager : MonoBehaviour
 {
     [SerializeField] private RawImage _avatar;
-    [SerializeField] private RawImage _editorHome;
 
     [SerializeField] private Texture2D _basicAvatar;
 
@@ -21,12 +20,10 @@ public class AvatarManager : MonoBehaviour
         {
             string path = PlayerPrefs.GetString("AvatarPath");
             _avatar.texture = NativeGallery.LoadImageAtPath(path, maxSize);
-            _editorHome.texture = NativeGallery.LoadImageAtPath(path, maxSize);
         }
         else
         {
             _avatar.texture = _basicAvatar;
-            _editorHome.texture = _basicAvatar;
         }
     }
 
@@ -46,8 +43,8 @@ public class AvatarManager : MonoBehaviour
                 {
                     Debug.Log("Couldn't load texture from " + path);
                     return;
-                }         
-                _editorHome.texture = _texture;
+                }
+                _avatar.texture = _texture;
                 PlayerPrefs.SetString("AvatarPath", _path);
             }
         }, "Select an image", "image/*");
