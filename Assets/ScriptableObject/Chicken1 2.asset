@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121ad575eb0e6d942a0268783c1247fe, type: 3}
+  m_Name: Chicken1 2
+  m_EditorClassIdentifier: 
+  chickenType: 2
+  hatchingTime: 900
+  pauseTime: 0
+  price: 100
+  reward: 50
+  menuDefaultCard: {fileID: 21300000, guid: 878aa6b59fdff8f45b74465e503cde72, type: 3}
+  menuSelectCard: {fileID: 21300000, guid: 5302f72b26a226d43bdab5e33c242289, type: 3}
+  shopCard: {fileID: 21300000, guid: 45aceb8f55eb5b540b5d802b078f2e60, type: 3}
