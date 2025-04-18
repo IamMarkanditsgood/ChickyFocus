@@ -269,15 +269,15 @@ public class Home : BasickScreen
         _rewardText.text = currentChicken.reward.ToString();
         _winScreen.Show();
 
-        int coins = SaveManager.PlayerPrefs.LoadInt(GameSaveKeys.Coins);
+        int coins = _gameData.coins;
         coins += currentChicken.reward;
         _gameData.coins = coins;
 
-        int totalCoins = SaveManager.PlayerPrefs.LoadInt(GameSaveKeys.TotalCoins);
+        int totalCoins = _gameData.totalCoins;
         totalCoins += currentChicken.reward;
         _gameData.totalCoins = totalCoins;
 
-        int totalTime = SaveManager.PlayerPrefs.LoadInt(GameSaveKeys.TotalTime);
+        int totalTime = _gameData.totalTime;
         totalTime = totalTime + currentChicken.hatchingTime + currentChicken.pauseTime;
         _gameData.totalTime = totalTime;
 
